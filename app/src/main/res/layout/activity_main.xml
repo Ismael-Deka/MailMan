@@ -6,21 +6,26 @@ android:layout_width="match_parent"
 android:layout_height="match_parent"
 android:id="@+id/main_activity"
 tools:context="com.example.mailman.MainActivity">
-<ListView
-    android:id="@+id/email_list"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:padding="9dp"
-    />
-<LinearLayout
-    android:id="@+id/empty_state"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_centerInParent="true">
+    <ListView
+        android:id="@+id/email_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:padding="9dp"
+        />
+
     <com.google.android.gms.common.SignInButton
         android:id="@+id/sign_in_button"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
-</LinearLayout>
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"/>
+    <ProgressBar
+        android:id="@+id/progress_bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"/>
+
+
 
 </RelativeLayout>
