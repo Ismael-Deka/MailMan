@@ -3,6 +3,7 @@ package com.example.mailman;
 import android.content.Context;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
+import android.text.Html;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -40,7 +41,7 @@ public class EmailListAdapter extends ArrayAdapter<Email> {
         TextView dateView = (TextView) listItemView.findViewById(R.id.date);
 
         subjectView.setText(email.getSubject());
-        snippetView.setText(email.getSnippet());
+        snippetView.setText(Html.fromHtml(email.getSnippet()));
         dateView.setText(email.getDate());
 
         return listItemView;

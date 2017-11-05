@@ -15,7 +15,9 @@
                     android:textAllCaps="false"
                     android:text="Title"
                     android:textAppearance="?android:textAppearanceMedium"
-                    android:paddingTop="24dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:paddingTop="32dp"
                     android:paddingLeft="12dp"/>
                 <TextView
                     android:id="@+id/snippet"
@@ -24,6 +26,8 @@
                     android:textAllCaps="false"
                     android:text="Body Snippet"
                     android:textAppearance="?android:textAppearanceSmall"
+                    android:ellipsize="end"
+                    android:maxLines="2"
                     android:paddingLeft="12dp"
                     />
         </LinearLayout>
