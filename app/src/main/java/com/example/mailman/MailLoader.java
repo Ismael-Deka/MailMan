@@ -106,7 +106,6 @@ public class MailLoader extends AsyncTaskLoader<ArrayList<Email>> {
 
             body = StringUtils.newStringUtf8(message.getPayload().getBody().decodeData());
             snippet = message.getSnippet();
-            snippet.replace("&#39;","\'");
         } return new Email(from,to,date,subject,body,snippet);
 
     }
