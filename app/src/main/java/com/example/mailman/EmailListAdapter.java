@@ -10,7 +10,10 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.TextView;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 
 /**
  * Created by Ismael on 11/5/2017.
@@ -46,5 +49,20 @@ public class EmailListAdapter extends ArrayAdapter<Email> {
 
         return listItemView;
 
+    }
+
+    private String formatDate(String strCurrentDate){
+        SimpleDateFormat format = new SimpleDateFormat("EEE, dd MMM yyyy hh:mm:ss Z");
+        Date newDate = null;
+        try {
+            newDate = format.parse(strCurrentDate);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+
+        format = new SimpleDateFormat("MMM dd,yyyy hh:mm a");
+        String date = format.format(newDate);
+
+        return date;
     }
 }
